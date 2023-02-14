@@ -13,7 +13,7 @@
 - Modify task
 - delete a task
 
-# Components
+# COMPONENTS
 
 ## App
 
@@ -29,3 +29,5 @@
 - Modify a task
 - Mark done task
 - delete done task
+
+## Button
