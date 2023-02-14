@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import useApi from "../../hooks/useApi";
 import { useAppSelector } from "../../store/hooks";
+import TodoListStyled from "./todoListSyled";
 
 const TodoList = (): JSX.Element => {
   const { getApiData } = useApi();
@@ -12,11 +13,17 @@ const TodoList = (): JSX.Element => {
   return (
     <>
       <h1>Todo List</h1>
-      <form className="todo-form">
+
+      <TodoListStyled>
         {todos.map((todo) => (
-          <input className="todo" key={todo.id}></input>
+          <div className="todolist">
+            <li className="todo" key={todo.id}>
+              {todo.name}
+              <button className="button"></button>
+            </li>
+          </div>
         ))}
-      </form>
+      </TodoListStyled>
     </>
   );
 };
